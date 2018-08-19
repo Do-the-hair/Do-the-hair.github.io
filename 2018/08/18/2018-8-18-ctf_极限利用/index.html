@@ -133,6 +133,11 @@
                             <div class="ribbon"></div>
                         </div>
                         
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
                         
                         <div class="icon-wrap icon-me hide" data-idx="3">
                             <div class="user"></div>
@@ -146,6 +151,8 @@
                     <ul class="tips-inner">
                         <li>菜单</li>
                         <li>标签</li>
+                        
+                        <li>友情链接</li>
                         
                         
                         <li>关于我</li>
@@ -184,9 +191,19 @@
                 </section>
                 
                 
-                
-                
                 <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://www.whj.website/">whj</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="https://www.zxcvbnmagl.xyz/">zxcvb</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
                 
                     <div id="js-aboutme">一只淹死在知识海洋里的单身狗</div>
                 </section>
@@ -292,52 +309,6 @@
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>  这到题目十分的灵活，让我知道了许多不知道的内容，同时也感谢大佬们的帮助。</p>
 <h3 id="原文地址-https-www-anquanke-com-post-id-154284"><a href="#原文地址-https-www-anquanke-com-post-id-154284" class="headerlink" title="原文地址:    https://www.anquanke.com/post/id/154284"></a>原文地址:    <a href="https://www.anquanke.com/post/id/154284" target="_blank" rel="noopener">https://www.anquanke.com/post/id/154284</a></h3>
       
-      
-        <div class="page-reward">
-          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
-          <div class="hide_box"></div>
-          <div class="shang_box">
-            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
-            <div class="shang_tit">
-              <p>纯属好玩</p>
-            </div>
-            <div class="shang_payimg">
-              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
-            </div>
-              <div class="pay_explain">扫码打赏，你说多少就多少</div>
-            <div class="shang_payselect">
-              
-                <div class="pay_item checked" data-id="alipay">
-                  <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
-                </div>
-              
-              
-                <div class="pay_item" data-id="wechat">
-                  <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
-                </div>
-              
-            </div>
-            <div class="shang_info">
-              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
-            </div>
-          </div>
-        </div>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
-        <script type="text/javascript">
-          $(".pay_item").click(function(){
-            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
-            var dataid=$(this).attr('data-id');
-            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
-            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
-          });
-          function dashangToggle(){
-            
-            $(".hide_box").fadeToggle();
-            $(".shang_box").fadeToggle();
-          }
-        </script>
       
     </div>
     
