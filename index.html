@@ -256,6 +256,87 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-2018-8-21-网鼎杯_beijing_wp" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/21/2018-8-21-网鼎杯_beijing_wp/" class="article-date">
+      <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/21/2018-8-21-网鼎杯_beijing_wp/">beijing_wp</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>这次打网鼎杯给我的感觉就是全场被虐，web狗无法存活。</p>
+</blockquote>
+<h2 id="运行分析"><a href="#运行分析" class="headerlink" title="运行分析"></a>运行分析</h2><pre><code>直接运行发现打印了一些乱码的字符串
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PILX6g.png" alt=""></p>
+<h2 id="ida一把梭"><a href="#ida一把梭" class="headerlink" title="ida一把梭"></a>ida一把梭</h2><pre><code>先查看函数发现有main函数，那就直接f5,f5,f5。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOKtx.png" alt=""></p>
+<pre><code>之后我们发现是直接调用sub_8048460函数并打印返回值
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOl9K.png" alt=""></p>
+<pre><code>然后我们就查看这个传入的值是什么,发现是一些数字啥的。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOtHA.png" alt=""></p>
+<pre><code>接下来是查看这个sub_8048460函数了。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOd4P.png" alt=""></p>
+<pre><code>发现有一个分支，于是猜测可能是flag的长度。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOB38.png" alt=""></p>
+<pre><code>接下来随便跟进一个分支进行分析,可以发现是一个亦或操作，我们在去看看要被亦或的值。都是上面的值亦或下面的值。因为发现差不多都是可打印字符串，
+所以再次猜测flag在这里，但是顺序是乱的。而原本的顺序可能是在main里面的list中。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIO6Bj.png" alt=""><br><img src="https://s1.ax1x.com/2018/08/21/PIO43T.png" alt=""></p>
+<pre><code>我们去main下面的list中提取数据
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIxV8x.png" alt=""></p>
+<pre><code>之后尝试写一下脚本。先理一下思路。
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 伪代码</span><br><span class="line">encode():</span><br><span class="line">	<span class="keyword">return</span> flag[i] ^ xor[i]</span><br><span class="line">main():</span><br><span class="line">	<span class="built_in">list</span>[] &lt; = 记录着正确的 flag 打印顺序 </span><br><span class="line">	print encode(<span class="built_in">list</span>[i])</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"># python</span><br><span class="line">string = 'aginbefjml&#123;z&#125;_'</span><br><span class="line">num = [<span class="number">6</span>, <span class="number">9</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0xa</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0xb</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">0xd</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">0xc</span>]</span><br><span class="line">flag = <span class="string">''</span></span><br><span class="line">for i in num:</span><br><span class="line">	flag += <span class="built_in">string</span>[i]</span><br><span class="line">print(flag)</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h2><p><img src="https://s1.ax1x.com/2018/08/21/PIztYR.png" alt=""></p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-2018-8-20-xxe_学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

@@ -3,19 +3,31 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | sh1llc0de&#39;s blog</title>
+  <title>beijing_wp | sh1llc0de&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="听说世上有一种没有腿的鸟，它只能一直飞呀飞呀，累了就在风中睡会，一生只能落到一次，那就是生命结束的时候。">
-<meta name="keywords" content="sh1llc0de,ctf Blog,web,bin,study">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sh1llc0de&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="这次打网鼎杯给我的感觉就是全场被虐，web狗无法存活。  运行分析直接运行发现打印了一些乱码的字符串  ida一把梭先查看函数发现有main函数，那就直接f5,f5,f5。  之后我们发现是直接调用sub_8048460函数并打印返回值  然后我们就查看这个传入的值是什么,发现是一些数字啥的。  接下来是查看这个sub_8048460函数了。  发现有一个分支，于是猜测可能是flag的长度。">
+<meta name="keywords" content="CTF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="beijing_wp">
+<meta property="og:url" content="http://yoursite.com/2018/08/21/2018-8-21-网鼎杯_beijing_wp/index.html">
 <meta property="og:site_name" content="sh1llc0de&#39;s blog">
-<meta property="og:description" content="听说世上有一种没有腿的鸟，它只能一直飞呀飞呀，累了就在风中睡会，一生只能落到一次，那就是生命结束的时候。">
+<meta property="og:description" content="这次打网鼎杯给我的感觉就是全场被虐，web狗无法存活。  运行分析直接运行发现打印了一些乱码的字符串  ida一把梭先查看函数发现有main函数，那就直接f5,f5,f5。  之后我们发现是直接调用sub_8048460函数并打印返回值  然后我们就查看这个传入的值是什么,发现是一些数字啥的。  接下来是查看这个sub_8048460函数了。  发现有一个分支，于是猜测可能是flag的长度。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PILX6g.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIOKtx.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIOl9K.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIOtHA.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIOd4P.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIOB38.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIO6Bj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIO43T.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIxV8x.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/08/21/PIztYR.png">
+<meta property="og:updated_time" content="2018-08-21T15:25:13.314Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sh1llc0de&#39;s blog">
-<meta name="twitter:description" content="听说世上有一种没有腿的鸟，它只能一直飞呀飞呀，累了就在风中睡会，一生只能落到一次，那就是生命结束的时候。">
+<meta name="twitter:title" content="beijing_wp">
+<meta name="twitter:description" content="这次打网鼎杯给我的感觉就是全场被虐，web狗无法存活。  运行分析直接运行发现打印了一些乱码的字符串  ida一把梭先查看函数发现有main函数，那就直接f5,f5,f5。  之后我们发现是直接调用sub_8048460函数并打印返回值  然后我们就查看这个传入的值是什么,发现是一些数字啥的。  接下来是查看这个sub_8048460函数了。  发现有一个分支，于是猜测可能是flag的长度。">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/08/21/PILX6g.png">
   
   
     <link rel="icon" href="//img/my.jpg">
@@ -39,8 +51,8 @@
           fancybox: true,
           animate: true,
           isHome: false,
-          isPost: false,
-          isArchive: true,
+          isPost: true,
+          isArchive: false,
           isTag: false,
           isCategory: false,
           open_in_new: false
@@ -251,209 +263,193 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-2018-8-21-网鼎杯_beijing_wp" class="article article-type-post" itemscope itemprop="blogPost">
   
+    <div class="article-meta">
+      <a href="/2018/08/21/2018-8-21-网鼎杯_beijing_wp/" class="article-date">
+      <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">2018-08-21</time>
+</a>
+    </div>
   
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      beijing_wp
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <blockquote>
+<p>这次打网鼎杯给我的感觉就是全场被虐，web狗无法存活。</p>
+</blockquote>
+<h2 id="运行分析"><a href="#运行分析" class="headerlink" title="运行分析"></a>运行分析</h2><pre><code>直接运行发现打印了一些乱码的字符串
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PILX6g.png" alt=""></p>
+<h2 id="ida一把梭"><a href="#ida一把梭" class="headerlink" title="ida一把梭"></a>ida一把梭</h2><pre><code>先查看函数发现有main函数，那就直接f5,f5,f5。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOKtx.png" alt=""></p>
+<pre><code>之后我们发现是直接调用sub_8048460函数并打印返回值
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOl9K.png" alt=""></p>
+<pre><code>然后我们就查看这个传入的值是什么,发现是一些数字啥的。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOtHA.png" alt=""></p>
+<pre><code>接下来是查看这个sub_8048460函数了。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOd4P.png" alt=""></p>
+<pre><code>发现有一个分支，于是猜测可能是flag的长度。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIOB38.png" alt=""></p>
+<pre><code>接下来随便跟进一个分支进行分析,可以发现是一个亦或操作，我们在去看看要被亦或的值。都是上面的值亦或下面的值。因为发现差不多都是可打印字符串，
+所以再次猜测flag在这里，但是顺序是乱的。而原本的顺序可能是在main里面的list中。
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIO6Bj.png" alt=""><br><img src="https://s1.ax1x.com/2018/08/21/PIO43T.png" alt=""></p>
+<pre><code>我们去main下面的list中提取数据
+</code></pre><p><img src="https://s1.ax1x.com/2018/08/21/PIxV8x.png" alt=""></p>
+<pre><code>之后尝试写一下脚本。先理一下思路。
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 伪代码</span><br><span class="line">encode():</span><br><span class="line">	<span class="keyword">return</span> flag[i] ^ xor[i]</span><br><span class="line">main():</span><br><span class="line">	<span class="built_in">list</span>[] &lt; = 记录着正确的 flag 打印顺序 </span><br><span class="line">	print encode(<span class="built_in">list</span>[i])</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"># python</span><br><span class="line">string = 'aginbefjml&#123;z&#125;_'</span><br><span class="line">num = [<span class="number">6</span>, <span class="number">9</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0xa</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">0</span>, <span class="number">0xb</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">0xd</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">0xc</span>]</span><br><span class="line">flag = <span class="string">''</span></span><br><span class="line">for i in num:</span><br><span class="line">	flag += <span class="built_in">string</span>[i]</span><br><span class="line">print(flag)</span><br></pre></td></tr></table></figure>
+</code></pre><h2 id="flag"><a href="#flag" class="headerlink" title="flag"></a>flag</h2><p><img src="https://s1.ax1x.com/2018/08/21/PIztYR.png" alt=""></p>
+
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
+    </div>
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/21/2018-8-21-网鼎杯_beijing_wp/" class="archive-article-date">
-      <time datetime="2018-08-20T16:00:00.000Z" itemprop="datePublished">08-21</time>
-</a>
-        </div>
-         
+  </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/21/2018-8-21-网鼎杯_beijing_wp/">beijing_wp</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/08/21/2018-8-21-网鼎杯_beijing_wp/">beijing_wp</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 sh1llc0de&#39;s blog 的个人博客">sh1llc0de&#39;s blog</a></p>
+        <p><span>发布时间:</span>2018年08月21日 - 00时00分</p>
+        <p><span>最后更新:</span>2018年08月21日 - 23时25分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/21/2018-8-21-网鼎杯_beijing_wp/" title="beijing_wp">http://yoursite.com/2018/08/21/2018-8-21-网鼎杯_beijing_wp/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/08/21/2018-8-21-网鼎杯_beijing_wp/　　作者: sh1llc0de&#39;s blog" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
     </div>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/08/20/2018-8-20-xxe_学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">xxe_学习</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/20/2018-8-20-xxe_学习/" class="archive-article-date">
-      <time datetime="2018-08-19T16:00:00.000Z" itemprop="datePublished">08-20</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/20/2018-8-20-xxe_学习/">xxe_学习</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#运行分析"><span class="toc-number">1.</span> <span class="toc-text">运行分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ida一把梭"><span class="toc-number">2.</span> <span class="toc-text">ida一把梭</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#flag"><span class="toc-number">3.</span> <span class="toc-text">flag</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/漏洞挖掘/">漏洞挖掘</a></li></ul>
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/08/20/2018-8-20-xxe_学习/" title="下一篇: xxe_学习">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/21/2018-8-21-网鼎杯_beijing_wp/">beijing_wp</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/2018-8-20-xxe_学习/">xxe_学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/2018-8-18-ctf_极限利用/">ctf-极限利用</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/15/2018-8-15-python_生成器/">Python-生成器学习</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/14/2018-8-10-upload-labs总结/">uploab-labs靶机总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/10/2018-8-10-shiyanba总结/">实验吧_题目总结</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/18/2018-8-18-ctf_极限利用/" class="archive-article-date">
-      <time datetime="2018-08-17T16:00:00.000Z" itemprop="datePublished">08-18</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/18/2018-8-18-ctf_极限利用/">ctf-极限利用</a>
-    </h1>
-  
 
-        <div class="article-info info-on-archive">
-          
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/15/2018-8-15-python_生成器/" class="archive-article-date">
-      <time datetime="2018-08-14T16:00:00.000Z" itemprop="datePublished">08-15</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/15/2018-8-15-python_生成器/">Python-生成器学习</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/14/2018-8-10-upload-labs总结/" class="archive-article-date">
-      <time datetime="2018-08-13T16:00:00.000Z" itemprop="datePublished">08-14</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/14/2018-8-10-upload-labs总结/">uploab-labs靶机总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/10/2018-8-10-shiyanba总结/" class="archive-article-date">
-      <time datetime="2018-08-09T16:00:00.000Z" itemprop="datePublished">08-10</time>
-</a>
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/10/2018-8-10-shiyanba总结/">实验吧_题目总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
@@ -528,17 +524,6 @@
         };
     })
 </script>
-
-    <button class="hide-labels">TAG 开关</button>
-    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js">
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $(".article-info").toggle(200);
-            });
-        });
-    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
